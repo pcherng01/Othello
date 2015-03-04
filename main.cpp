@@ -19,7 +19,6 @@ using namespace std;
  */
 ////////////////////////////////////////////////////////////////////////
 int main(int argc, const char * argv[]) {
-   // 36 lines
    int row, column, pass = 0;
    // black goes first
    char currentPlayer = 1;
@@ -42,7 +41,7 @@ int main(int argc, const char * argv[]) {
          cout << "White's turn, please choose move: ";
          GetMove(&row, &column);
       }
-      while (!IsValidMove(board,row, column)) {
+      while (!IsValidMove(board, row, column)) {
          cout << "Invalid move, try again: ";
          GetMove(&row, &column);
       }
@@ -57,10 +56,11 @@ int main(int argc, const char * argv[]) {
          pass = 0;
       }
    }
-   if (GetValue(board) < 0) {
+   int boardValue = GetValue(board);
+   if (boardValue < 0) {
       cout << "Game over. White wins." << endl;
    }
-   else if (GetValue(board) > 0){
+   else if (boardValue > 0){
       cout << "Game over. Black wins." << endl;
    }
    else{
