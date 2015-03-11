@@ -1,2 +1,2 @@
 # Othello
-Othello project written in C++
+Othello(Or Reversi) project written in C++
